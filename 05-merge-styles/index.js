@@ -10,7 +10,7 @@ const mergeStyles = async () => {
     const array = [];
 
     for (const file of files) {
-      if (file.isFile() && path.extname(file.name).includes('css')) {
+      if (file.isFile() && path.extname(file.name).includes('.css')) {
         const readFile = await fsPromises.readFile(
           path.join(__dirname, 'styles', file.name)
         );
